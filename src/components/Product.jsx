@@ -20,6 +20,9 @@ const Product = () => {
   const handleSearchData = (data) => {
     setFilteredData(data);
   };
+  const handleEmbedding = (data) => {
+    setFilteredData(data);
+  };
 
   const handleSort = () => {
     const newSortOrder = sortOrder === "desc" ? "asc" : "desc";
@@ -108,7 +111,7 @@ const Product = () => {
   return (
     <div className="flex flex-col items-center">
       <section className="flex flex-col md:flex-row items-center justify-between ">
-        <Searchbar onSearch={handleSearchData} />
+        <Searchbar onSearch={handleSearchData} onEmbedding={handleEmbedding} />
         <div className="flex justify-end m-5">
           <Button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md "
